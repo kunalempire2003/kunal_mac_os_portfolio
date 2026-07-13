@@ -65,6 +65,7 @@ const Dock = () => {
 
     const toggleApp =(app)=>{
      //TODO Implement Open Window Logic
+        console.log(app);
 
 
     };
