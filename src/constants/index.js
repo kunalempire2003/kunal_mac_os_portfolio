@@ -20,19 +20,23 @@ const navIcons = [
     {
         id: 1,
         img: "/icons/wifi.svg",
+        lightModeImg: "/icons/wifi_white.svg",
     },
     {
         id: 2,
         img: "/icons/search.svg",
+        lightModeImg: "/icons/search_white.svg",
     },
     {
         id: 3,
         img: "/icons/user.svg",
+        lightModeImg: "/icons/user_white.svg",
     },
     {
         id: 4,
         img: "/icons/mode.svg",
         action: "control-center",
+        lightModeImg: "/icons/mode_white.svg",
     },
 ];
 

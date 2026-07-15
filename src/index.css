@@ -8,7 +8,6 @@ body {
     overflow: hidden;
     height: 100dvh;
     background-color: #020617;
-    background-image: url("/images/new_wallpaper.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -21,7 +20,7 @@ body {
 }
 
 body[data-theme="light"] {
-    background-image: url("/images/mac_os_image_wallpaper.png");
+    background-image: url("/images/10-14-Day-Thumb.jpg");
     background-color: #f8fafc;
     --topbar-bg: rgba(255, 255, 255, 0.58);
     --topbar-fg: #020617;
@@ -32,10 +31,10 @@ body[data-theme="light"] {
 }
 
 body[data-theme="dark"] {
-    background-image: url("/images/new_wallpaper.jpg");
+    background-image: url("/images/10-14-Night-Thumb.jpg");
     background-color: #020617;
-    --topbar-bg: rgba(15, 23, 42, 0.68);
-    --topbar-fg: #f8fafc;
+    --topbar-bg: transparent;
+    --topbar-fg: papayawhip;
     --surface-bg: rgba(15, 23, 42, 0.96);
     --surface-fg: #e2e8f0;
     --surface-soft: #1e293b;
@@ -98,7 +97,7 @@ body[data-theme="dark"] {
     }
 
     body[data-theme="dark"] nav.topbar {
-        @apply text-white;
+        color: papayawhip;
     }
 }
 

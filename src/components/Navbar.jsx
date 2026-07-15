@@ -7,7 +7,9 @@ import useUIStore from "#components/store/ui.js";
 const Navbar = () => {
     const [now, setNow] = useState(dayjs());
     const {openWindow} = useWindowStore();
-    const {toggleControlCenter} = useUIStore();
+    const {toggleControlCenter, theme, isLightMode} = useUIStore();
+
+    const lightModeEnabled = theme === "dark" || isLightMode;
 
     useEffect(() => {
         const timer = window.setInterval(() => setNow(dayjs()), 60000);
@@ -33,8 +35,11 @@ const Navbar = () => {
     return (
         <nav className="topbar">
             <div className="topbar-left">
-                <img src="/images/logo.svg" alt="logo" />
-                <p className="font-bold">Kunal's Macfolio</p>
+                <img
+                    src={lightModeEnabled ? "/icons/logo_white.svg" : "/images/logo.svg"}
+                    alt="logo"
+                />
+                <p className="font-bold">Mac Space</p>
 
                 <ul>
                     {navLinks.map(({id, name, type}) => (
@@ -46,14 +51,14 @@ const Navbar = () => {
             </div>
             <div className="topbar-right">
                 <ul>
-                    {navIcons.map(({id, img, action}) => (
+                    {navIcons.map(({id, img, lightModeImg, action}) => (
                         <li key={id}>
                             {action === "control-center" ? (
                                 <button type="button" onClick={toggleControlCenter} aria-label="Open control center" className="control-center-trigger">
-                                    <img src={img} className="icon-hover" alt="Control center" />
+                                    <img src={lightModeEnabled && lightModeImg ? lightModeImg : img} className="icon-hover" alt="Control center" />
                                 </button>
                             ) : (
-                                <img src={img} className="icon-hover" alt={`nav-${id}`} />
+                                <img src={lightModeEnabled && lightModeImg ? lightModeImg : img} className="icon-hover" alt={`nav-${id}`} />
                             )}
                         </li>
                     ))}

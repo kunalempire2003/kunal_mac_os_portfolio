@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {Navbar, Dock} from "#components/index.js";
+import {Navbar, Dock, Welcome} from "#components/index.js";
 import {Finder, Safari, Contact, Gallery, Resume, Terminal} from "#components/windows/index.js";
 import Desktop from "#components/Desktop.jsx";
 import BootScreen from "#components/BootScreen.jsx";
@@ -31,7 +31,7 @@ const App = () => {
                 <Navbar />
                 <Desktop />
                 <Dock />
-
+                <Welcome />
                 <Finder />
                 <Safari />
                 <Contact />
