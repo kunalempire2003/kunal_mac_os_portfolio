@@ -32,6 +32,7 @@ const navIcons = [
     {
         id: 4,
         img: "/icons/mode.svg",
+        action: "control-center",
     },
 ];
 
@@ -217,8 +218,8 @@ export {
 
 const WORK_LOCATION = {
     id: 1,
-    type: "work",
-    name: "Work",
+    type: "projects",
+    name: "Projects",
     icon: "/icons/work.svg",
     kind: "folder",
     children: [
@@ -455,6 +456,43 @@ const RESUME_LOCATION = {
     ],
 };
 
+const desktopFolders = [
+    {
+        id: "projects",
+        name: "Projects",
+        icon: "/images/folder.png",
+        windowKey: "finder",
+        data: { view: "projects" },
+        top: "4rem",
+        left: "3rem",
+    },
+    {
+        id: "resume",
+        name: "Resume",
+        icon: "/images/pdf.png",
+        windowKey: "resume",
+        top: "11rem",
+        left: "3.5rem",
+    },
+    {
+        id: "gallery",
+        name: "Gallery",
+        icon: "/images/photos.png",
+        windowKey: "photos",
+        data: { view: "gallery" },
+        top: "18rem",
+        left: "4rem",
+    },
+    {
+        id: "contact",
+        name: "Contact",
+        icon: "/images/contact.png",
+        windowKey: "contact",
+        top: "4rem",
+        right: "4rem",
+    },
+];
+
 const TRASH_LOCATION = {
     id: 4,
     type: "trash",
@@ -485,6 +523,7 @@ const TRASH_LOCATION = {
 
 export const locations = {
     work: WORK_LOCATION,
+    projects: WORK_LOCATION,
     about: ABOUT_LOCATION,
     resume: RESUME_LOCATION,
     trash: TRASH_LOCATION,
@@ -504,3 +543,4 @@ const WINDOW_CONFIG = {
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
+export { desktopFolders };
