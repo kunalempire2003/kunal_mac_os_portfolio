@@ -456,19 +456,19 @@ body[data-theme="dark"] {
             }
 
             .tile-1 {
-                @apply col-span-2 row-span-3;
+                @apply col-span-2 row-span-4;
             }
 
             .tile-2 {
-                @apply col-span-2 row-span-2;
+                @apply col-span-1 row-span-2;
             }
 
             .tile-3 {
-                @apply col-span-2 row-span-1;
+                @apply col-span-1 row-span-2;
             }
 
             .tile-4 {
-                @apply col-span-2 row-span-2;
+                @apply col-span-2 row-span-3;
             }
         }
     }

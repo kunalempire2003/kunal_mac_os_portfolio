@@ -15,7 +15,7 @@ const FINDER_SECTIONS = [
 
 const WEB_VIEWS = {
     github: "https://github.com/kunalempire2003",
-    leetcode: "https://leetcode.com/",
+    leetcode: "https://leetcode.com/u/Demon619/",
 };
 
 const getProjectSummary = (project) => {
@@ -184,7 +184,6 @@ const Finder = () => {
                                 <a href={currentWebView} target="_blank" rel="noreferrer">Open</a>
                             </div>
                             <iframe src={currentWebView} title={activeView} />
-                            <p>Web view preview. If the remote site blocks embedding, open it in a new tab.</p>
                         </div>
                     )}
                 </div>
