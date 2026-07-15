@@ -3,11 +3,11 @@ import {useLayoutEffect, useRef} from "react";
 import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
 import {Draggable} from "gsap/Draggable";
-const WindowWrapper = (Component,windowKey) => {
-
-    const wrapped=(props)=>{
-        const {focusWindow , windows}=useWindowStore();
-        const {isOpen , zIndex}= windows[windowKey];
+// WindowWrapper.jsx - Modified version
+const WindowWrapper = (Component, windowKey) => {
+    const WrappedWindow = (props) => {
+        const { focusWindow, windows } = useWindowStore();
+        const { isOpen, zIndex } = windows[windowKey];
 
         const ref = useRef(null);
 
@@ -48,8 +48,7 @@ const WindowWrapper = (Component,windowKey) => {
         </section>)
     };
 
-    wrapped.displayName = `WindowWrapper(${Component.displayName || Component.name || "Component"})`;
-    return wrapped;
-}
-
+    WrappedWindow.displayName = `WindowWrapper(${Component.displayName || Component.name || "Component"})`;
+    return WrappedWindow;
+};
 export default WindowWrapper
